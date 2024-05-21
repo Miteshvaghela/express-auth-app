@@ -1,11 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import UserRoute from './routes/user.route.js';
+import BodyParser from 'body-parser';
+import session from 'express-session';
 
-const app = express();
 const port = process.env.PORT || 8080;
-app.use(express.json()); // return json data
-app.use(express.urlencoded({extended:true})); // to allow submit the urlencoded form data
+const app = express();
+
+app.use(BodyParser.json()); // return json data
+app.use(BodyParser.urlencoded({extended:true})); // to allow submit the urlencoded form data
 app.use('/api/users', UserRoute);
 
 
