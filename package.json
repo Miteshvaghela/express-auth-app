@@ -2,6 +2,7 @@
   "name": "express-auth",
   "version": "1.0.0",
   "description": "User login registraiton system with backend api",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node --env-file .env index.js",
